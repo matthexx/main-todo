@@ -1,0 +1,10 @@
+.main-footer{
+    background:coral;
+    min-height: 40px;
+    width: 100%;
+    color:#fff;
+    bottom: 0;
+    position:absolute;
+    text-align: center;
+
+}
