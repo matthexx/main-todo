@@ -2,7 +2,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import Home from './Pages/Home';
 import Todo from './Pages/Todo';
@@ -11,16 +12,17 @@ import Header from './components/Header'
 
 
 export default function App() {
+  const [ user, setUser] = React.useState('')
   return (
     <Router>
-      <Header/>
+      <Header user={user}/>
       <div>
          <Switch>
           <Route path="/todo">
-            <Todo />
+           {!user ? <Redirect to="/"/> : <Todo/>}
           </Route>
           <Route path="/">
-            <Home />
+            <Home setUser={setUser} />
           </Route>
         </Switch>
       </div>

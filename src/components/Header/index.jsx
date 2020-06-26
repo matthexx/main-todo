@@ -1,16 +1,16 @@
 import React from 'react';
 import{
     Link,
-} from "react-router-dom";
+    } from "react-router-dom";
 import "./style.css";
 
-function Header(){
+function Header(props){
 
     return(
     <div className="main-header">
 
         <Link to="/todo">Todo</Link>
-        <h3>Welcome John Doe</h3>
+      {props.user ? <h3>Welcome {props.user}</h3> : ''} 
     </div>
     )
 }

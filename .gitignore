@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/components/MainContent.js
+src/components/Header.js
+src/components/Footer.js
